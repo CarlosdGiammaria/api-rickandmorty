@@ -1,0 +1,9 @@
+---
+const { personaje } = Astro.props;
+const { name, image, id } = personaje;
+---
+
+<div class="personaje">
+  <a href={`/infopersonaje/${id}`}><h1>{name}</h1></a>
+  <img src={image} alt="foto" />
+</div>

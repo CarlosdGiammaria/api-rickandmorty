@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Personaje from "../components/Personaje.astro";
+const datos = await fetch("https://rickandmortyapi.com/api/character");
+const data = await datos.json();
+console.log(data.results);
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		{data.results.map((personaje) => <Personaje personaje={personaje} />)}
+	</main>
+</Layout>
+
+<style></style>
+<script></script>
